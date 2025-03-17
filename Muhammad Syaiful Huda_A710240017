@@ -1,0 +1,70 @@
+class Komputer:
+    def __init__(self, merek, ram, prosesor, vga): 
+        self.merek = merek
+        self.ram = ram 
+        self._prosesor = prosesor
+        self._vga = vga  
+    def hidupkan(self):
+        print(f"Komputer {self.merek} dihidupkan.")
+
+    def matikan(self):
+        print(f"Komputer {self.merek} dimatikan.")
+
+    def buka_aplikasi(self, aplikasi):
+        print(f"Membuka aplikasi {aplikasi} di komputer {self.merek}.")
+
+    def tutup_aplikasi(self, aplikasi):
+        print(f"Menutup aplikasi {aplikasi} di komputer {self.merek}.")
+
+    # Getter dan Setter untuk prosesor
+    def get_prosesor(self):
+        return self._prosesor
+    
+    def set_prosesor(self,prosesor):
+        self._prosesor = prosesor
+
+    # Getter dan Setter untuk vga
+    def get_vga(self):
+        return self._vga
+
+    def set_vga(self, vga):
+        self._vga = vga
+
+# Membuat objek baru
+komputer1 = Komputer(merek="MSI", ram="16GB", prosesor="Ryzen 5 ", vga="AMD RX 6650M")
+komputer2 = Komputer(merek="LENOVO", ram="16GB", prosesor="Intel Core i5", vga="RTX 3050")
+
+# Mengakses dan mengubah variabel private menggunakan method getter dan setter
+print(f"Merek: {komputer1.merek}")
+print(f"RAM: {komputer1.ram}")  
+print(f"Prosesor: {komputer1.get_prosesor()}")
+print(f"VGA: {komputer1.get_vga()}")  
+
+komputer1.hidupkan()
+komputer1.matikan()
+komputer1.buka_aplikasi(aplikasi="Chrome")
+komputer1.tutup_aplikasi(aplikasi="Chrome")
+
+# Mengubah nilai ram dan vga menggunakan setter
+komputer1.set_prosesor("Ryzen 9")
+komputer1.set_vga("AMD RX 7900M")
+
+print(f"mengubah Prosesor menjadi: {komputer1.get_prosesor()}")
+print(f"mengubah VGA menjadi: {komputer1.get_vga()}")
+
+print(f"Merek: {komputer2.merek}")
+print(f"RAM: {komputer2.ram}")  # Mengakses ram menggunakan getter
+print(f"Prosesor: {komputer2.get_prosesor()}")
+print(f"VGA: {komputer2.get_vga()}")  # Mengakses vga menggunakan getter
+
+komputer2.hidupkan()
+komputer2.matikan()
+komputer2.buka_aplikasi(aplikasi="VS Code")
+komputer2.tutup_aplikasi(aplikasi="VS Code")
+
+# Mengubah nilai ram dan vga menggunakan setter
+komputer2.set_prosesor("Interl core i9")
+komputer2.set_vga("NVIDIA RTX 4090")
+
+print(f"mengubah prosesor menjadi: {komputer2.get_prosesor()}")
+print(f"mengubah VGA menjadi: {komputer2.get_vga()}")
