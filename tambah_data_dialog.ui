@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TambahDataDialogBase</class>
+ <widget class="QDialog" name="TambahDataDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>364</width>
+    <height>152</height>
+   </rect>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>300</width>
+    <height>200</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tambah Data Warga</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Masukkan Data Warga</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditNama">
+     <property name="text">
+      <string>Nama:</string>
+     </property>
+     <property name="placeholderText">
+      <string>Nama Warga</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditNIK">
+     <property name="text">
+      <string>NIK:</string>
+     </property>
+     <property name="placeholderText">
+      <string>NIK</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditBantuan">
+     <property name="text">
+      <string>Bantuan:</string>
+     </property>
+     <property name="placeholderText">
+      <string>Jenis Bantuan</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButtonSimpan">
+     <property name="text">
+      <string>Simpan</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
